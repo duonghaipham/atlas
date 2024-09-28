@@ -1,4 +1,10 @@
 version: "3.9"
 services:
   autolycus:
-    image:
+    image: ghcr.io/duonghaipham/autolycus:latest
+    container_name: autolycus
+    ports:
+      - "9001:3000"
+    environment:
+      - NODE_ENV=production
+    restart: always
