@@ -37,6 +37,6 @@ jobs:
           script: |
             cd ~
             rm -rf /usr/local/src/atlas
-            mkdir -p /usr/local/src/atlas
+            sudo mkdir -p /usr/local/src/atlas
             unzip -qq atlas.zip -d /usr/local/src/atlas
             rm -f atlas.zip
