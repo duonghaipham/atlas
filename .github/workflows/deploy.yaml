@@ -26,7 +26,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           source: "atlas.zip"
-          target: "/usr/local/src/"
+          target: "~/"
 
       - name: Unzip files
         uses: appleboy/ssh-action@master
@@ -37,5 +37,5 @@ jobs:
           script: |
             cd /usr/local/src/
             rm -rf atlas
-            unzip -qq atlas.zip ./atlas
+            unzip -qq ~/atlas.zip -d /usr/local/src/atlast
             rm -f atlas.zip
