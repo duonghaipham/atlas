@@ -35,7 +35,8 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd /usr/local/src/
-            rm -rf atlas
-            unzip -qq ~/atlas.zip -d /usr/local/src/atlast
+            cd ~
+            rm -rf /usr/local/src/atlas
+            mkdir -p /usr/local/src/atlas
+            unzip -qq atlas.zip -d /usr/local/src/atlas
             rm -f atlas.zip
